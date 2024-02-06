@@ -1,6 +1,6 @@
 # Kaitai Struct: runtime library for Lua
 
-This library implements Kaitai Struct API for Lua 5.3.
+This library implements Kaitai Struct API for Luau.
 
 Kaitai Struct is a declarative language used for describe various binary
 data structures, laid out in files or in memory: i.e. binary file
@@ -8,8 +8,8 @@ formats, network stream packet formats, etc.
 
 Further reading:
 
-* [About Kaitai Struct](http://kaitai.io/)
-* [About API implemented in this library](http://doc.kaitai.io/stream_api.html)
+- [About Kaitai Struct](http://kaitai.io/)
+- [About API implemented in this library](http://doc.kaitai.io/stream_api.html)
 
 ## Installation
 
@@ -31,6 +31,11 @@ Further reading:
    ```
 
    The second command is only required if you need support for `process: zlib`.
+
+## Environment
+
+Ensure you have patched the Luau runtime `require` function to pull from this repository.
+You can insert the snippet from `environment.lua` or create your own custom implementation. After so, you can inline a generated blob or create it as a module.
 
 ## Licensing
 
